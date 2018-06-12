@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      calculadora
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label > 1º numero </ion-label>
+    <ion-input [(ngModel)]="numberA" type="number"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label > 2º numero </ion-label>
+    <ion-input [(ngModel)]="numberB" type="number"> </ion-input>
+  </ion-item>
+
+  <button ion-button (click)="performFunction('a')" color="dark"> + </button>
+
+  <button ion-button (click)="performFunction('s')" color="dark"> - </button>
+
+  <button ion-button (click)="performFunction('m')" color="dark"> * </button>
+
+  <button ion-button (click)="performFunction('d')" color="dark"> / </button>
+
+  <ion-item>
+    <ion-label fixed> Operação </ion-label>
+    <ion-label fixed> {{typeOfAction}}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed> Resultado </ion-label>
+    <ion-label> {{result}}</ion-label>
+  </ion-item>
+
+</ion-content>
